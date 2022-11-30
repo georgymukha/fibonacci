@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --transition: 0.8;
+  --border-width: 5;
+  --border-radius: 6;
+}
+
+.container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-field {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-width: calc(var(--border-width) * 1px);
+  border-style: solid;
+  border-color: var(--accent);
+  border-radius: calc(var(--border-radius) * 1px);
+  text-align: center;
+  outline: transparent;
+  transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+  min-width: 270px;
+}
+
+.input-field:placeholder-shown {
+  --accent: hsl(0, 0%, 50%);
+}
+
+.fibonacci {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 1em;
+}
+
+.fibonacci__title {
+  text-align: center;
+}
